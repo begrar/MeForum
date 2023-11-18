@@ -8,9 +8,12 @@
 
 <form method="POST">
     <br/><br/>
+    
+<div class="form-group"></div>
     {% csrf_token %}
     {{ form.as_p }}
     <button class="btn btn-dark">Post</button>
+</div>
 
 
 

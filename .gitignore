@@ -2,7 +2,6 @@
 *.log
 *.pot
 *.pyc
-Kajetan Krzewina
 ./MeForum/MeForum/__pycache__/settings.cpython-312.pyc
 ./MeForum/MeForum/__pycache__/wsgi.cpython-312.pyc
 ./MeForum/MeForum/__pycache__/wsgi.cpython-311.pyc

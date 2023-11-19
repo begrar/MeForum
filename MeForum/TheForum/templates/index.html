@@ -7,9 +7,11 @@
 <h1>Post</h1>
 <ul>
 {% for post in object_list %}
-    <li><a href="{% url 'article-details' post.pk %}">
+    <li>
+        <a href="{% url 'article-details' post.pk %}">
         {{ post.title }}</a> -
-        <a href="{% url 'category' post.category %}">{{ post.category }}</a> - 
+        <a href="{% url 'category' post.category|slugify %}">
+        {{ post.category }}</a> - 
         {{post.author.first_name }}
         {{post.author.last_name }} -
         {{ post.post_date }}
@@ -21,7 +23,8 @@
             <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
 
         {% endif %}<br/>
-        {{ post.body|slice:":200"|safe }}</li>
+        {{ post.body|slice:":200"|safe }}
+    </li>
         <hr color="black">
 {% endfor %}
 </ul>

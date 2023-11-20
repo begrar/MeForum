@@ -4,7 +4,6 @@ from .models  import Post, Category
 from django.contrib.admin.sites import site
 from django.contrib.auth.admin import UserAdmin
 from .forms import CustomUserCreationForm
-from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 #create custom form

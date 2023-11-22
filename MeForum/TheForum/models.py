@@ -22,7 +22,9 @@ class Post(models.Model):
     body = RichTextField(blank=True, null=True)
     post_date = models.DateField(auto_now_add=True)
     category =  models.CharField(max_length=255, default='coding')
+    snippet =  models.CharField(max_length=255)
     likes = models.ManyToManyField(User, related_name='blog_post')
+    
 
     def total_likes(self):
         return self.likes.count()

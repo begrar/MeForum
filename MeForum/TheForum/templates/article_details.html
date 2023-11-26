@@ -35,14 +35,14 @@
     {% csrf_token %}
 
 {% if user.is_authenticated %}
-{% if liked %}
+    {% if liked %}
             <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-sm">
                 Unlike</button> 
         {% else %}
             <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-dark btn-sm">
                 Like</button> 
 
-            {% endif %}
+    {% endif %}
     {% else %}
 
     <small><a href="{% url 'login' %}">Login</a> to like</small>

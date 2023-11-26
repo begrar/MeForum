@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models  import Post, Category
+from .models  import Post, Category, Profile
 #create custom form
 from django.contrib.admin.sites import site
 from django.contrib.auth.admin import UserAdmin
@@ -31,6 +31,6 @@ class UserAdmin(UserAdmin):
 
 
 
-
+admin.site.register(Profile)
 admin.site.register(Post)
 admin.site.register(Category)

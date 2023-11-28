@@ -10,7 +10,7 @@ from TheForum.models import Profile
 class CreateUserProfilePageView(CreateView):
     model = Profile
     form_class = ProfilePageForm
-    tempalet_name = "registration/create_user_profile_page.html"
+    template_name = "registration/create_user_profile_page.html"
     #fields = '__all__'
 
     def form_valid(self, form):

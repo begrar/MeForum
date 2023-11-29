@@ -62,25 +62,7 @@
 
     </form>
 
-    <br/><br/>
-    <hr color="black">
-    <h2>Comments...</h2>
-    <br/><br/>
-
-    {% if not post.comments.all %}
-        No Comments Yet...<a href="#">Add One</a>
-        <br/><br/>
-        <hr color="black">
-    {% else %}
-        {% for comment in post.comments.all %}
-            <strong>{{ comment.name }} - {{ comment.date_added}}</strong>
-            <br/>
-            {{ comment.body }}
-            <br/><br/>
-            <hr color="black">
-            <br/><br/>
-        {% endfor %}
-    {% endif %}
+    
     
 
     <br/><br/>
@@ -128,6 +110,32 @@
           </div>
         </div>
       </div>
+    
+      <br/>
+      <hr color="black">
+      <h2>Comments...</h2>
+      
+  
+      {% if not post.comments.all %}
+          No Comments Yet...<a href="{% url 'add_comment' post.pk %}">Add One</a>
+          <br/><br/>
+          <hr color="black">
+      {% else %}
+      
+      
+      <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
+      <br/><br/>
+
+          {% for comment in post.comments.all %}
+              <strong>{{ comment.name }} - {{ comment.date_added}}</strong>
+              <br/>
+              {{ comment.body }}
+              <br/><br/>
+              <hr color="black">
+              <br/><br/>
+          {% endfor %}
+      {% endif %}
+
 
 
 

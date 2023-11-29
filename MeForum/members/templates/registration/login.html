@@ -6,7 +6,7 @@
 
 <h1>Login...</h1>
 <br/><br/>
-<form>
+
 <div class="form-group">
     <form method="POST">
     {% csrf_token %}
@@ -22,7 +22,7 @@
 <br/>
     <button class="btn btn-dark">Login</button>
 </div>
-</form>   
+
 <br/>
 <h5>Not Registered? Sign Up <a href="{% url 'register' %}">Here...</a></h5>
 
